@@ -32,6 +32,8 @@ module.exports = {
       { extensions: ['.jsx', 'js'] }
     ],
     'react/state-in-constructor': [2, 'never'],
+    'react/static-property-placement': [0],
+    'react/forbid-prop-types': [0, { 'forbid': ['array', 'object']}],
     'import/prefer-default-export': 'off',
     'no-param-reassign': 'off',
     'no-console': ['error', { allow: ['tron'] }]

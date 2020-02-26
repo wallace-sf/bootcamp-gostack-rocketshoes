@@ -2,6 +2,7 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import {
   MdRemoveCircleOutline,
   MdAddCircleOutline,
@@ -10,8 +11,17 @@ import {
 
 import * as CartActions from '../../store/modules/cart/actions';
 import { Container, ProductTable, Total } from './styles';
+import formatPrice from '../../utils/format';
 
-function Cart({ cart, removeFromCart }) {
+function Cart({ cart, removeFromCart, updateAmount, total }) {
+  function increment(product) {
+    return updateAmount(product.id, product.amount + 1);
+  }
+
+  function decrement(product) {
+    return updateAmount(product.id, product.amount - 1);
+  }
+
   return (
     <Container>
       <ProductTable>
@@ -36,17 +46,17 @@ function Cart({ cart, removeFromCart }) {
               </td>
               <td>
                 <div>
-                  <button type="button">
+                  <button type="button" onClick={() => decrement(product)}>
                     <MdRemoveCircleOutline size={20} color="#7159c1" />
                   </button>
                   <input type="number" readOnly value={product.amount} />
-                  <button type="button">
+                  <button type="button" onClick={() => increment(product)}>
                     <MdAddCircleOutline size={20} color="#7159c1" />
                   </button>
                 </div>
               </td>
               <td>
-                <strong>R$ 259,80</strong>
+                <strong>{product.subTotal}</strong>
               </td>
               <td>
                 <button
@@ -65,15 +75,30 @@ function Cart({ cart, removeFromCart }) {
 
         <Total>
           <span>Total</span>
-          <strong>R$ 1920,28</strong>
+          <strong>{total}</strong>
         </Total>
       </footer>
     </Container>
   );
 }
 
+Cart.propTypes = {
+  cart: PropTypes.array.isRequired,
+  updateAmount: PropTypes.func.isRequired,
+  removeFromCart: PropTypes.func.isRequired,
+  total: PropTypes.number.isRequired,
+};
+
 const mapStateToProps = state => ({
-  cart: state.cart,
+  cart: state.cart.map(product => ({
+    ...product,
+    subTotal: formatPrice(product.amount * product.price),
+  })),
+  total: formatPrice(
+    state.cart.reduce((total, product) => {
+      return total + product.amount * product.price;
+    }, 0)
+  ),
 });
 
 const mapDispatchToProps = dispatch =>
