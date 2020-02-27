@@ -11,7 +11,7 @@ import { ProductList } from './styles';
 
 class Home extends Component {
   static propTypes = {
-    addToCart: PropTypes.func.isRequired,
+    addToCartSuccess: PropTypes.func.isRequired,
     amount: PropTypes.object.isRequired,
   };
 
@@ -31,7 +31,7 @@ class Home extends Component {
   }
 
   render() {
-    const { addToCart, amount } = this.props;
+    const { addToCartRequest, amount } = this.props;
     const { products } = this.state;
 
     return (
@@ -41,7 +41,7 @@ class Home extends Component {
             <img src={product.image} alt={product.name} />
             <strong>{product.title}</strong>
             <span>{product.priceFormatted}</span>
-            <button type="button" onClick={() => addToCart(product)}>
+            <button type="button" onClick={() => addToCartRequest(product.id)}>
               <div>
                 <MdAddShoppingCart size={16} color="#fff" />
                 <span>{amount[product.id] || 0}</span>
