@@ -11,7 +11,7 @@ import { ProductList } from './styles';
 
 class Home extends Component {
   static propTypes = {
-    addToCartSuccess: PropTypes.func.isRequired,
+    addToCartRequest: PropTypes.func.isRequired,
     amount: PropTypes.object.isRequired,
   };
 
