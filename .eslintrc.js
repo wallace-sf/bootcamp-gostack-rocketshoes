@@ -23,7 +23,8 @@ module.exports = {
   },
   plugins: [
     'react',
-    'prettier'
+    'prettier',
+    'react-hooks'
   ],
   rules: {
     'prettier/prettier': 'error',
@@ -33,7 +34,9 @@ module.exports = {
     ],
     'react/state-in-constructor': [2, 'never'],
     'react/static-property-placement': [0],
-    'react/forbid-prop-types': [0, { 'forbid': ['array', 'object']}],
+    'react/forbid-prop-types': [0, { 'forbid': ['array', 'object'] }],
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
     'import/prefer-default-export': 'off',
     'no-param-reassign': 'off',
     'no-console': ['error', { allow: ['tron'] }]
