@@ -1,68 +1,44 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">
+  <img alt="Fastfeet" title="GoBarber" src="https://i.imgur.com/a34ao0x.png" width="150px" />
+</h1>
 
-## Available Scripts
+<p align="center">“Simples! É você que controla a sua mente, se você acreditar e lutar pelo que quer, você conseguirá atingir tudo o que pretende.”</blockquote>
 
-In the project directory, you can run:
+<p align="center">
+  <img alt="GitHub count languages" src="https://img.shields.io/badge/languages-3-brightgreen" />
+  <img alt="Made by Wallace Ferreira" src="https://img.shields.io/badge/made%20by-Wallace%20Ferreira-green" />
+  <img alt="Licence by MIT" src="https://img.shields.io/badge/license-MIT-green" />
+</p>
 
-### `yarn start`
+## :rocket: Sobre o Bootcamp
+O bootcamp da Rocketseat é composto por fases e módulos. Cada módulo é realizado um desafio para fixação do conteúdo apresentado.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Instalação
+Antes de prosseguir é necessário alguns passo para o projeto funcionar. Após baixar o reposótorio, acesse a pasta e digite no terminal: 
+```sh
+# npm
+$ npm i
+# yarn
+$ yarn
+```
+## API
+Para iniciar a API, via terminal no diretório do projeto digite:
+```sh
+$ json-server server.json -p 3333
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Scripts
+Para iniciar o projeto digite:
+```sh
+# npm
+$ npm start
 
-### `yarn test`
+# yarn
+$ yarn start
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Resultado
+Para ver uma demonstração em vídeo [clique aqui](https://youtu.be/4nA2w5KpQSQ).
+<h1 align="center">
+  <img alt="Fastfeet" title="GoBarber" src="https://i.imgur.com/blvQeET.png" />
+</h1>
